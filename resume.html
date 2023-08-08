@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <title>hxh's Homepage</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="author" content="Huang Xiaohan" />
+
+  <link rel="stylesheet" href="w3.css">
+
+  <style>
+  .w3-sidebar a {font-family: "Roboto", sans-serif}
+  body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+  </style>
+
+  <link rel="icon" type="image/png" href="images/icons.png">
+
+</head>
+
+<body class="w3-content" style="max-width:1100px">
+
+<!-- 菜单 -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-collapse w3-top w3-right" style="z-index:3;width:150px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <h3><b>Welcome Back</b></h3>
+  </div>
+  <div class="w3-padding-64 w3-text-light-grey w3-large" style="font-weight:bold">
+    <a href="#home" class="w3-bar-item w3-button">首页</a>
+    <a href="#news" class="w3-bar-item w3-button">新闻</a>
+    <a href="#projects" class="w3-bar-item w3-button">项目</a>
+    <a href="#publications" class="w3-bar-item w3-button">论文</a>
+    <a href="#award" class="w3-bar-item w3-button">奖项</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <div class="w3-bar-item w3-padding-24"></div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right"  style="font-stretch: extra-expanded;" onclick="w3_open()"><b>≡</b></a>
+  </div>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:150px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+
+  <!-- 个人介绍 -->
+    <div class="w3-container w3-center w3-padding-32" id="home">
+      <img style="width: 30%;max-width: 300px" alt="profile photo" src="images/hxh.jpg">
+      <h1>黄晓涵</h1>
+        <p class="w3-justify" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:600px">
+          hi! 我是一名GIS专业的同学。本科毕业于安徽大学地理信息科学，研究生就读于南京师范大学地图学与地理信息系统。
+        <p class="w3-center">
+          <a href="#">邮箱:x01914049@stu.ahu.edu.cn</a> &nbsp/&nbsp
+          <a href="https://huang3721.github.io/">github</a> &nbsp/&nbsp
+          <a href="#">QQ:670881415</a>
+        </p>
+        </tbody></table>
+  </div>
+
+  <!-- 新闻 -->
+  <div class="w3-container w3-light-grey w3-padding-32" id="news">
+   <h2>新闻</h2>
+      <p><li> 06/2023  论文《Seamless reconstruction of AMSR-E land surface temperature swath gaps for China's landmass》,IEEE TGRS,Review status</li></p>
+      <p><li> 02/2023, 论文《GEE支持下的1988—2022年淮北市土地利用变化及其对生态系统服务价值的影响》于《安庆师范大学学报(自然科学版)》发表</li></p>
+   	  <p><li> 07/2022, 论文《基于深度学习的水稻种植区域提取研究》于《地理空间信息》发表</li></p>
+  </div>
+  <br><br>
+  <!-- 项目-->
+  <div class="w3-container w3-padding-32 w3-light-grey" id="projects">
+    <h2>项目</h2>
+    <p class="w3-justify">
+        本科期间，我的研究方向主要为深度学习+遥感。硕士期间，我的感兴趣方向为webgis三维可视化、无人机三维建模。
+    </p>
+    
+        <h4><li><strong>1、AMSR-E LST无缝重建深度学习方法研究</strong></li></h4>
+        <img style="width:35%;" src="images/图7-样本集生成流程图.png"> 
+        <img style="width:50%;" src="images/图8-网络模型结构示意图.png">
+        <img style="width:35%;" src="images/图11-a.png">
+        <img style="width:45%;" src="images/图9-训练过程示意图.png">
+
+        <p class="w3-justify">
+        <a style="color: #447ec9" href="./data/2023 AMSR-E LST.pdf">论文《AMSR-E地表温度数据无缝重建深度学习方法》</a> 
+        </p>
+        <p class="w3-justify">
+          &nbsp&nbsp&nbsp&nbsp地表温度数据（Land Surface Temperature，LST）是重要的气候资源之一，对全球气候变化等研究具有重要意义。被动微波遥感传感器（如Advanced Microwave Scanning Radiometer for EOS，AMSR-E）
+          可获取全天候的地表温度数据，但由于轨道间的扫描间隙导致数据存在部分缺失，限制了该数据在全球或区域尺度的实际应用能力。现有的多时相特征连接卷积神经网络模型重建方法
+          （Multi-temporal Feature Connection-CNN，MTFC-CNN）在样本数量较少、样本特征不够丰富时，重建结果存在明显的“有缝”痕迹。<br>
+          &nbsp&nbsp&nbsp&nbsp基于此，本文在分析AMSR-E LST轨道间隙的周期性和邻近时空互补性特征基础上，提出了一种样本优化的多时相特征连接卷积神经网络无缝重建方法（Sample Optimized MTFC，SO-MTFC），
+          样本优化包括小范围缺失样本对插值生成方法和单次循环掩膜策略两个方面。
+          以中国大陆区域为研究对象，将AMSR-E LST数据按照昼夜、季节划分为10个数据子集进行实验。
+          结果表明：重建区域的地表温度数值大小合理，温度分布形状保持了相对连续性，原始区域与重建区域基本实现无缝连接；与相应的MODIS LST产品对比中发现，
+          重建区域LST值和原始区域LST值与MODIS LST产品间具有相近的均方根误差以及决定系数，其中每月15日对比中，RMSE在白天偏差0.56 K、夜晚偏差0.7 K，R2白天、夜晚偏差均为0.05；
+          地面站点验证实验中，黑河流域（Heihe River Basin，HRB）3个站点原始区域、重建区域RMSE的整体平均偏差为0.52 K；与原始MTFC-CNN方法比较中，本文方法SO-MTFC取得了更好的目视效果，
+          且以MODIS LST作为参考时，白天RMSE提升0.34 K，夜晚RMSE提升0.16 K。因此本文方法能够稳健、有效地重建AMSR-E LST轨道间隙。
+        </p> 
+
+        <h4><li><strong>2、水稻种植区域提取项目</strong></li></h4>
+        <img style="width:25%;" src="images/水稻提取1.png"> 
+        <img style="width:30%;" src="images/水稻提取2.png"> 
+        <img style="width:40%;" src="images/水稻提取3.png"> 
+        <p class="w3-justify">
+        <a style="color: #447ec9" href="#">论文《基于深度学习的水稻种植区域提取研究》</a>
+        </p>
+        <p class="w3-justify">
+          &nbsp&nbsp&nbsp&nbsp水稻在我国的农业领域占有重要的地位，产量约占全国粮食总产量的50%，因此对水稻种植区域实现准确、快速提取具有重要意义。
+          以安徽省凤台县区域为研究对象，本文提出了结合深度学习与多时序遥感影像提取水稻种植区域的方法。
+          实验结果表明：抽穗期与成熟期时相组合提取精度最高、效果最好，水稻抽穗期与成熟期的植被特征反差能够较好地提取出水稻区域；且在与传统监督分类方法的对比中，本文提出方法的提取效果明显优于传统监督分类的方法。
+        </p> 
+
+      <h4><li><strong>3、遥感影像自动配准项目(生产实习)</strong></li></h4>
+
+      </p>
+      <p class="w3-justify">
+        &nbsp&nbsp&nbsp&nbsp相关材料、数据丢失
+      </p> 
+
+        <h4><li><strong>4、巢湖叶绿素浓度反演课程设计</strong></li></h4>
+        <img style="width:35%;" src="images/反演1.jpg"> 
+        <img style="width:40%;" src="images/反演2.png"> 
+        </p>
+        <p class="w3-justify">
+          &nbsp&nbsp&nbsp&nbsp在本次课程设计中，我主要负责机器学习部分的工作，包括数据的预处理、数据增强、模型编写、模型调参、预测及制图。
+        </p> 
+
+        <h4><li><strong>5、地图制图项目</strong></li></h4>
+        <img style="width:20%;" src="images/地图3.png"> 
+        <img style="width:25%;" src="images/地图2.png"> 
+        <img style="width:25%;" src="images/地图1.png"> 
+        <img style="width:25%;" src="images/地图4.png"> 
+        </p>
+        <p class="w3-justify">
+          &nbsp&nbsp&nbsp&nbsp数据获取来源网络，利用ArcMap，Adobe illustrator等软件绘制。
+        </p> 
+
+  </div>
+  <br><br>
+  <!-- 论文 -->
+  <div class="w3-container w3-padding-32 w3-light-grey" id="publications">
+    <h2>论文</h2>
+      <p class="w3-left-align" style="line-height:200%">
+        
+      </p>
+    <ol>
+      <p>
+      <li><strong>Seamless reconstruction of AMSR-E land surface temperature swath gaps for China's landmass</strong>
+      <br>
+      <strong>Xiaohan Huang</strong> , Chan Li, Tian Yang, Biao Cao, Jie Cheng, Guochen Xie, Penghai Wu
+      <br>
+      <em>IEEE TGRS</em> 2023 Review status | <a style="color: #447ec9" href="#">paper</a> | <a style="color: #447ec9" href="#">code</a>
+      <br><br>
+      <li><strong>Research on Rice Extraction From Multi-temporal Remote Sensing Images
+        Based on Deep Learning</strong>
+        <br>
+        <strong>HUANG Xiaohan</strong> , HUANG Wenlong
+        <br>
+        <em>GEOSPATIAL INFORMATION</em> 2023 | <a style="color: #447ec9" href="#">paper</a> | <a style="color: #447ec9" href="#">code</a>
+      <br><br>
+      <li><strong>Land Use Change and Its Impact on Ecosystem Services Value
+        in Huaibei City from 1988 to 2022 Supported by GEE</strong>
+        <br>
+        WU Penghai, FANG Hongmei, <strong>HUANG Xiaohan</strong> , WANG Yanni, XIA Xinyue
+        <br>
+        <em>Journal of Anqing Normal University（Natural Science Edition）</em> 2023 | <a style="color: #447ec9" href="#">paper</a> | <a style="color: #447ec9" href="#">code</a>
+      </p>
+      </ol>
+    </p>
+  </div>
+  <br><br>
+  <!-- 奖项 -->
+  <div class="w3-container w3-padding-32 w3-light-grey" id="award">
+    <h2>奖项</h2>
+    <p><li> 2022, 安徽省大学生测绘技能大赛团体一等奖</p>
+    <p><li> 2022, 安徽省大学生测绘技能大赛程序设计赛项二等奖</p>
+    <p><li> 2019-2022, 连续3年安徽大学国家励志奖学金</p>
+    <p><li> 2019-2020, 安徽大学三好学生称号</p>
+  </div>  
+  <!-- 底部 -->
+  <div class="w3-light-grey w3-center w3-padding-24">
+
+  No.
+  <script type="text/javascript">
+  var sc_project=12347113; 
+  var sc_invisible=0; 
+  var sc_security="21aca5d1"; 
+  var sc_https=1; 
+  var scJsHost = "https://";
+  document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
+  "statcounter.com/counter/counter.js'></"+"script>");
+  </script> Visitor Since Feb 2022. Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a>
+  <noscript>
+    <div class="statcounter"><a title="Web Analytics Made Easy -
+  StatCounter" href="https://statcounter.com/" target="_blank"><img
+  class="statcounter" src="https://c.statcounter.com/12347113/0/21aca5d1/0/"
+  alt="Web Analytics Made Easy - StatCounter"></a></div>
+  </noscript>
+
+  </div>
+
+</div>
+
+<script>
+// Accordion 
+function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Click on the "Jeans" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
